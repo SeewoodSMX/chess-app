@@ -1,11 +1,11 @@
 import React from 'react';
-import './styles/App.scss';
-import Chessboard from './chessboard';
+import './styles/app.scss';
+import Chessboard from './components/chessboard/chessboard';
 
 function App() {
     return (
         <div className='content'>
-            <h1 className='pageTitle'>chess</h1>
+            <h1 className='page-title'>chess</h1>
             <Chessboard></Chessboard>
         </div>
     );
