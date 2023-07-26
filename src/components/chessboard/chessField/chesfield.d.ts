@@ -2,6 +2,7 @@ interface Props {
     row: rowIndex;
     columnChar: columnChar;
     color: chessFieldColor;
+    image:string;
 }
 
 type rowIndex = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 ;

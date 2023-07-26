@@ -1,16 +1,47 @@
+@use '../../styles/variables' as v;
+
 .chessboard {
     margin: 0 auto;
     max-width: 800px;
     height: auto;
-
-    &__row {
+    font-size: v.$font-size;
+    &__row,
+    &__label {
+        display: flex;
         display: -webkit-box;
         display: -moz-box;
         display: -ms-flexbox;
         display: -webkit-flex;
-        display: flex;
         -webkit-flex-flow: row;
         flex-flow: row;
         justify-content: space-around;
+        align-items: center;
+    }
+    &__label {
+        text-transform: uppercase;
+        margin: 0 28px;
+        &--top {
+            border-bottom: v.$chess-border;
+        }
+        &--bottom {
+            border-top: v.$chess-border;
+        }
+        &-info {
+            padding: 6px 0;
+            text-align: center;
+        }
+        &-side-info {
+            width: 32px;
+            align-self: stretch;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &--left {
+                border-right: v.$chess-border;
+            }
+            &--right {
+                border-left: v.$chess-border;
+            }
+        }
     }
 }

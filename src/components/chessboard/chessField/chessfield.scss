@@ -1,8 +1,9 @@
 .chess__field {
     flex: 1 0 auto;
     height: auto;
-    border: 1px solid gray;
-
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     &:before {
         content: '';
         float: left;
@@ -10,9 +11,16 @@
     }
 
     &--black {
-        background-color: black;
+        background-color: rgb(53, 53, 53);
     }
     &--white {
         background-color: white;
+    }
+    img {
+        object-fit: cover;
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+        border-radius: 5px;
     }
 }
